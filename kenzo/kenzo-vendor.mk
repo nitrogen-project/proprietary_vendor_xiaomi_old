@@ -23,6 +23,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/kenzo/proprietary/bin/dpmd:system/bin/dpmd \
     vendor/xiaomi/kenzo/proprietary/bin/hci_qcomm_init:system/bin/hci_qcomm_init \
     vendor/xiaomi/kenzo/proprietary/bin/hvdcp_opti:system/bin/hvdcp_opti \
+    vendor/xiaomi/kenzo/proprietary/bin/ims_rtp_daemon:system/bin/ims_rtp_daemon \
+    vendor/xiaomi/kenzo/proprietary/bin/imscmservice:system/bin/imscmservice \
+    vendor/xiaomi/kenzo/proprietary/bin/imsdatadaemon:system/bin/imsdatadaemon \
+    vendor/xiaomi/kenzo/proprietary/bin/imsqmidaemon:system/bin/imsqmidaemon \
     vendor/xiaomi/kenzo/proprietary/bin/ipacm-diag:system/bin/ipacm-diag \
     vendor/xiaomi/kenzo/proprietary/bin/irsc_util:system/bin/irsc_util \
     vendor/xiaomi/kenzo/proprietary/bin/mm-qcamera-daemon:system/bin/mm-qcamera-daemon \
@@ -125,6 +129,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/kenzo/proprietary/etc/permissions/com.quicinc.cne.xml:system/etc/permissions/com.quicinc.cne.xml \
     vendor/xiaomi/kenzo/proprietary/etc/permissions/ConnectivityExt.xml:system/etc/permissions/ConnectivityExt.xml \
     vendor/xiaomi/kenzo/proprietary/etc/permissions/dpmapi.xml:system/etc/permissions/dpmapi.xml \
+    vendor/xiaomi/kenzo/proprietary/etc/permissions/imscm.xml:system/etc/permissions/imscm.xml \
     vendor/xiaomi/kenzo/proprietary/etc/permissions/qcnvitems.xml:system/etc/permissions/qcnvitems.xml \
     vendor/xiaomi/kenzo/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
     vendor/xiaomi/kenzo/proprietary/etc/permissions/qti_permissions.xml:system/etc/permissions/qti_permissions.xml \
@@ -135,6 +140,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/kenzo/proprietary/framework/com.quicinc.cne.jar:system/framework/com.quicinc.cne.jar \
     vendor/xiaomi/kenzo/proprietary/framework/ConnectivityExt.jar:system/framework/ConnectivityExt.jar \
     vendor/xiaomi/kenzo/proprietary/framework/dpmapi.jar:system/framework/dpmapi.jar \
+    vendor/xiaomi/kenzo/proprietary/framework/imscmlibrary.jar:system/framework/imscmlibrary.jar \
     vendor/xiaomi/kenzo/proprietary/framework/tcmclient.jar:system/framework/tcmclient.jar \
     vendor/xiaomi/kenzo/proprietary/lib64/hw/consumerir.msm8952.so:system/lib64/hw/consumerir.msm8952.so \
     vendor/xiaomi/kenzo/proprietary/lib64/hw/fingerprint.msm8952.so:system/lib64/hw/fingerprint.msm8952.so \
@@ -219,6 +225,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libgsl.so:system/vendor/lib64/libgsl.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libhwdaphal.so:system/vendor/lib64/libhwdaphal.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libidl.so:system/vendor/lib64/libidl.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/libimscamera_jni.so:system/vendor/lib64/libimscamera_jni.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/libimsmedia_jni.so:system/vendor/lib64/libimsmedia_jni.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libizat_core.so:system/vendor/lib64/libizat_core.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/liblbs_core.so:system/vendor/lib64/liblbs_core.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libllvm-glnext.so:system/vendor/lib64/libllvm-glnext.so \
@@ -253,6 +261,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libQSEEComAPI.so:system/vendor/lib64/libQSEEComAPI.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libqti-perfd-client.so:system/vendor/lib64/libqti-perfd-client.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libril-qc-qmi-1.so:system/vendor/lib64/libril-qc-qmi-1.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/librcc.so:system/vendor/lib64/librcc.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libril-qcril-hook-oem.so:system/vendor/lib64/libril-qcril-hook-oem.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/librpmb.so:system/vendor/lib64/librpmb.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/librs_adreno_sha1.so:system/vendor/lib64/librs_adreno_sha1.so \
@@ -260,6 +269,25 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libRSDriver_adreno.so:system/vendor/lib64/libRSDriver_adreno.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libscale.so:system/vendor/lib64/libscale.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libsd_sdk_display.so:system/vendor/lib64/libsd_sdk_display.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-dplmedia.so:system/vendor/lib64/lib-dplmedia.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-ims-rcscmjni.so:system/vendor/lib64/lib-ims-rcscmjni.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-imsSDP.so:system/vendor/lib64/lib-imsSDP.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-imscamera.so:system/vendor/lib64/lib-imscamera.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-imsdpl.so:system/vendor/lib64/lib-imsdpl.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-imsqimf.so:system/vendor/lib64/lib-imsqimf.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-imsrcs.so:system/vendor/lib64/lib-imsrcs.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-imsrcscm.so:system/vendor/lib64/lib-imsrcscm.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-imsrcscmclient.so:system/vendor/lib64/lib-imsrcscmclient.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-imsrcscmservice.so:system/vendor/lib64/lib-imsrcscmservice.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-imss.so:system/vendor/lib64/lib-imss.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-imsvt.so:system/vendor/lib64/lib-imsvt.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-imsxml.so:system/vendor/lib64/lib-imsxml.so: \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-rcsimssjni.so:system/vendor/lib64/lib-rcsimssjni.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-rcsjni.so:system/vendor/lib64/lib-rcsjni.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-rtpcommon.so:system/vendor/lib64/lib-rtpcommon.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-rtpcore.so:system/vendor/lib64/lib-rtpcore.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-rtpdaemoninterface.so:system/vendor/lib64/lib-rtpdaemoninterface.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-rtpsl.so:system/vendor/lib64/lib-rtpsl.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/lib-sec-disp.so:system/vendor/lib64/lib-sec-disp.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libSecureUILib.so:system/vendor/lib64/libSecureUILib.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libsecureui.so:system/vendor/lib64/libsecureui.so \
@@ -276,6 +304,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libTimeService.so:system/vendor/lib64/libTimeService.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libulp2.so:system/vendor/lib64/libulp2.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libvendorconn.so:system/vendor/lib64/libvendorconn.so \
+    vendor/xiaomi/kenzo/proprietary/vendor/lib64/libvoice-svc.so:system/vendor/lib64/libvoice-svc.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libwms.so:system/vendor/lib64/libwms.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libwqe.so:system/vendor/lib64/libwqe.so \
     vendor/xiaomi/kenzo/proprietary/vendor/lib64/libxml.so:system/vendor/lib64/libxml.so \
@@ -823,4 +852,6 @@ PRODUCT_PACKAGES += \
     qcrilmsgtunnel \
     colorservice \
     qcnvitems \
-    qcrilhook
+    qcrilhook \
+    ims \
+    imssettings
