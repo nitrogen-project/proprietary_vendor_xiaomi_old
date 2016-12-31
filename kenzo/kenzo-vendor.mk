@@ -144,6 +144,9 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/kenzo/proprietary/lib64/libfp_client.so:system/lib64/libfp_client.so \
     vendor/xiaomi/kenzo/proprietary/lib64/libfpnav.so:system/lib64/libfpnav.so \
     vendor/xiaomi/kenzo/proprietary/lib64/libfpservice.so:system/lib64/libfpservice.so \
+    vendor/xiaomi/kenzo/proprietary/lib/egl/egl.cfg:system/lib/egl/egl.cfg \
+    vendor/xiaomi/kenzo/proprietary/lib/egl/libGLES_android.so:system/lib/egl/libGLES_android.so \
+    vendor/xiaomi/kenzo/proprietary/lib64/egl/libGLES_android.so:system/lib64/egl/libGLES_android.so \
     vendor/xiaomi/kenzo/proprietary/lib/hw/consumerir.msm8952.so:system/lib/hw/consumerir.msm8952.so \
     vendor/xiaomi/kenzo/proprietary/lib/hw/fingerprint.msm8952.so:system/lib/hw/fingerprint.msm8952.so \
     vendor/xiaomi/kenzo/proprietary/lib/libDiracAPI_SHARED.so:system/lib/libDiracAPI_SHARED.so \
